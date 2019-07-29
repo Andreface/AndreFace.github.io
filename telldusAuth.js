@@ -14,10 +14,11 @@
      
 
       function CallWebAPI() {
-        var client = new RestClient(BaseUrl);
+        
 
-        client.Authenticator = OAuth1Authenticator.ForProtectedResource(PublicKey, PrivateKey, Token, TokenSecret);
+        BaseUrl.Authenticator = OAuth1Authenticator.ForProtectedResource(PublicKey, PrivateKey, Token, TokenSecret);
         var request = new RestRequest("json/device/turnOn", Method.GET);
         request.AddParameter("id", 4777172, ParameterType.GetOrPost);
         var response = client.Execute(request);
     } ;
+
