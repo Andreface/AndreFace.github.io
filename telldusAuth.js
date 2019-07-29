@@ -20,4 +20,4 @@
         var request = new RestRequest("json/device/turnOn", Method.GET);
         request.AddParameter("id", 4777172, ParameterType.GetOrPost);
         var response = client.Execute(request);
-    } 
+    } ;
